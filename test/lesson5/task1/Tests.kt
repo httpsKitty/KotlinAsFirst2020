@@ -305,6 +305,10 @@ class Tests {
     @Tag("6")
     fun findSumOfTwo() {
         assertEquals(
+            Pair(1, 2),
+            findSumOfTwo(listOf(1, 0, 0, 0), 0)
+        )
+        assertEquals(
             Pair(-1, -1),
             findSumOfTwo(emptyList(), 1)
         )
@@ -313,14 +317,36 @@ class Tests {
             findSumOfTwo(listOf(1, 2, 3), 4)
         )
         assertEquals(
-            Pair(-1, -1),
-            findSumOfTwo(listOf(1, 2, 3), 6)
+            Pair(0, 2),
+            findSumOfTwo(listOf(3, 2, 1), 4)
         )
     }
 
     @Test
     @Tag("8")
     fun bagPacking() {
+//        assertEquals(
+//            setOf("Кубок"),
+//            bagPacking(
+//                mapOf("Кубок" to (457 to 424), "Слиток" to (413 to 413)),
+//                612
+//            )
+//        )
+//        assertEquals(
+//            setOf("Слиток"),
+//            bagPacking(
+//                mapOf("Кубок" to (2 to 1), "Слиток" to (1 to 2)),
+//                2
+//            )
+//        )
+//
+//        assertEquals(
+//            setOf("Слиток"),
+//            bagPacking(
+//                mapOf("Кубок" to (1 to 1), "Слиток" to (2 to 2)),
+//                2
+//            )
+//        )
         assertEquals(
             setOf("Кубок"),
             bagPacking(
@@ -335,5 +361,6 @@ class Tests {
                 450
             )
         )
+
     }
 }

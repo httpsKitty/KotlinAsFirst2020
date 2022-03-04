@@ -221,7 +221,7 @@ fun invertPositives(list: MutableList<Int>) {
     }
 }
 
-fun test() {
+fun exam() {
     // Участок номер 1
     val a = mutableListOf(1, -2, 3)
     invertPositives(a)
